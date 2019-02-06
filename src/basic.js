@@ -22,7 +22,7 @@ const init = async () => {
 
 const getFileStats = (handle) => {
     fs.fstat(handle, (err, stats) => {
-        if (err) console.log(`Encountered error: ${err}`)
+        if (err) console.log(`Encountered error: ${err}`) 
         else {
             console.log(stats)
 
