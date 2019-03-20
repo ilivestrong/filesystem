@@ -8,10 +8,11 @@ const chfilemodToOwnerWriteOnly = () => {
     })
 }
 
-const chfilemodToOwnerAllPermissions = () => {
+const chfilemodToOwnerAllPermissions = (readFileCallback) => {
     fs.chmod(_file, 0o400 | 0o200 | 0o100, (err) => {
         if (err) throw err
         console.log('owner granted all permissions on file.')
+        readFileCallback()
     })
 }
 
