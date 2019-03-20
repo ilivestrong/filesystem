@@ -17,9 +17,29 @@
 // fsapi.displayFilesInDir(`${__dirname}/src/`)
 // fsapi.readFile(`${__dirname}/src/basic2.js`)
 
-const fs = require('fs')
-const basic3 = require('./src/basic3')
+// const fs = require('fs')
+// const basic3 = require('./src/basic3')
 //basic3.checkFileDirAccess('package.json', fs.constants.R_OK)
 
 //basic3.appendDataToFile1('newfile.txt', '\nHello Node1')
 //basic3.appendDataToFile2('newfile2.txt', '\nHello Node2')
+(async () => {
+    // const chmod = require('./src/chmod')
+    // await chmod.chfilemodToOwnerWriteOnly()
+
+    // try {
+    //     //await chmod.readFile() // would result in failure, as we stripped down permissiom to 'write' only for owner.
+    // }
+    // catch (e) { }
+
+    // await chmod.chfilemodToOwnerAllPermissions(chmod.readFile)
+
+    // const cp = require('./src/copyfile')
+    // cp.cpFile()
+
+    const fileio = require('./src/fileio')
+    await fileio.tryreadstream()
+
+})()
+
+
